@@ -1,5 +1,6 @@
 package com.dehaat.dehaatassignment.rest;
 
+import com.dehaat.dehaatassignment.util.Constant;
 import com.google.gson.FieldNamingPolicy;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -41,7 +42,7 @@ public class AppRestClient {
                 .create();
 
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("") //ToDo: enter base url
+                .baseUrl(Constant.BASE_URL) //ToDo: enter base url
                 .addConverterFactory(GsonConverterFactory.create(gson))
                 .build();
 
