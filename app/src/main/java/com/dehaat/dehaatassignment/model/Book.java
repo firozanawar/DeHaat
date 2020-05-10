@@ -1,12 +1,21 @@
 package com.dehaat.dehaatassignment.model;
 
+import androidx.annotation.NonNull;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+
+@Entity(tableName = "book")
 public class Book {
 
     private String title;
+    @NonNull
+    @PrimaryKey
+    private String book_id;
     private String description;
     private String publisher;
     private String published_date;
     private Float price;
+    private String bookAuthorId;
 
     public String getTitle() {
         return title;
@@ -46,5 +55,21 @@ public class Book {
 
     public void setPrice(Float price) {
         this.price = price;
+    }
+
+    public String getBookAuthorId() {
+        return bookAuthorId;
+    }
+
+    public void setBookAuthorId(String bookAuthorId) {
+        this.bookAuthorId = bookAuthorId;
+    }
+
+    public String getBook_id() {
+        return book_id;
+    }
+
+    public void setBook_id(String book_id) {
+        this.book_id = book_id;
     }
 }
