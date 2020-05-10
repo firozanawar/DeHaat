@@ -72,12 +72,10 @@ public class BookDetailsFragment extends Fragment {
         mViewModel.currentSelected.observe(getActivity(), new Observer<Integer>() {
             @Override
             public void onChanged(Integer integer) {
-                //mViewModel.setLastSelected(currentIndex);
                 currentIndex = integer;
             }
         });
 
-        // setListAdapter here
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
     }

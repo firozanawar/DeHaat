@@ -32,6 +32,7 @@ import java.util.List;
 public class AuthorsListFragment extends Fragment implements IClickListener {
 
     private static final String TAG = "AuthorFragment";
+
     boolean mDualPane;
     int mCurCheckPosition = 0;
     private Context mContext;
@@ -90,8 +91,6 @@ public class AuthorsListFragment extends Fragment implements IClickListener {
             }
         });
 
-
-        // setListAdapter here
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
 
@@ -125,9 +124,6 @@ public class AuthorsListFragment extends Fragment implements IClickListener {
         mCurCheckPosition = index;
 
         if (mDualPane) {
-
-            // Check what fragment is currently shown, replace if needed.
-            //BookFragment details = (BookFragment) getFragmentManager().findFragmentById(R.id.layout_book);
             BookDetailsFragment details = BookDetailsFragment.newInstance(index);
             FragmentTransaction ft = getFragmentManager()
                     .beginTransaction();

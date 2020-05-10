@@ -12,7 +12,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.dehaat.dehaatassignment.R;
 import com.dehaat.dehaatassignment.model.Book;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class BookAdapter extends RecyclerView.Adapter<BookAdapter.BooksViewHolder> {
